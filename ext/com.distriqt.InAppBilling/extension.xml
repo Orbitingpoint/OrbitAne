@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/51.0">
+	<id>com.distriqt.InAppBilling</id>
+	<versionNumber>14.0.0</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>dqiap.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="Windows-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>dqiap.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

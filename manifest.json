@@ -1,0 +1,381 @@
+[
+  {
+    "id": "com.digitalstrawberry.ane.share",
+    "versionNumber": "1.1.0",
+    "dll": "dqshare.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": null,
+    "nativeDll": [
+      "native/win86/dqshare.dll",
+      "native/win64/dqshare.dll"
+    ],
+    "classes": [
+      "com.digitalstrawberry.ane.share.Share",
+      "com.digitalstrawberry.ane.share.ShareExtension",
+      "com.digitalstrawberry.ane.share.ShareOptions",
+      "com.digitalstrawberry.ane.share.SharedData",
+      "com.digitalstrawberry.ane.share.events.ShareEvent"
+    ],
+    "source": "ext/com.digitalstrawberry.ane.share/src"
+  },
+  {
+    "id": "com.distriqt.Application",
+    "versionNumber": "6.5.049",
+    "dll": "dqapp.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "app",
+    "nativeDll": null,
+    "classes": [
+      "com.distriqt.extension.application.Accessibility",
+      "com.distriqt.extension.application.Application",
+      "com.distriqt.extension.application.ApplicationDisplayModes",
+      "com.distriqt.extension.application.ApplicationExtension",
+      "com.distriqt.extension.application.AuthorisationStatus",
+      "com.distriqt.extension.application.Const",
+      "com.distriqt.extension.application.Defaults",
+      "com.distriqt.extension.application.Device",
+      "com.distriqt.extension.application.DeviceOrientation",
+      "com.distriqt.extension.application.DisplayMetrics",
+      "com.distriqt.extension.application.IDType",
+      "com.distriqt.extension.application.IOSStatusBarStyles",
+      "com.distriqt.extension.application.Keychain",
+      "com.distriqt.extension.application.Locale",
+      "com.distriqt.extension.application.ObjectUtils",
+      "com.distriqt.extension.application.OperatingSystem",
+      "com.distriqt.extension.application.Settings",
+      "com.distriqt.extension.application.StatusBarStyle",
+      "com.distriqt.extension.application.TimeZone",
+      "com.distriqt.extension.application._Accessibility",
+      "com.distriqt.extension.application._AlarmManagerImpl",
+      "com.distriqt.extension.application._DefaultsImpl",
+      "com.distriqt.extension.application._DeviceImpl",
+      "com.distriqt.extension.application._DisplayImpl",
+      "com.distriqt.extension.application._DisplayMetricsImpl",
+      "com.distriqt.extension.application._KeychainImpl",
+      "com.distriqt.extension.application._SettingsImpl",
+      "com.distriqt.extension.application._SoftKeyboardImpl",
+      "com.distriqt.extension.application.alarms.Alarm",
+      "com.distriqt.extension.application.alarms.AlarmBuilder",
+      "com.distriqt.extension.application.alarms.AlarmManager",
+      "com.distriqt.extension.application.display.AndroidSystemUiFlags",
+      "com.distriqt.extension.application.display.Display",
+      "com.distriqt.extension.application.display.DisplayCutout",
+      "com.distriqt.extension.application.display.DisplayMode",
+      "com.distriqt.extension.application.display.LayoutMode",
+      "com.distriqt.extension.application.display.NavigationBarStyle",
+      "com.distriqt.extension.application.display.UserInterfaceStyle",
+      "com.distriqt.extension.application.events.AlarmEvent",
+      "com.distriqt.extension.application.events.ApplicationEvent",
+      "com.distriqt.extension.application.events.ApplicationStateEvent",
+      "com.distriqt.extension.application.events.AuthorisationEvent",
+      "com.distriqt.extension.application.events.DefaultsEvent",
+      "com.distriqt.extension.application.events.DeviceOrientationEvent",
+      "com.distriqt.extension.application.events.DeviceStateEvent",
+      "com.distriqt.extension.application.events.SettingsEvent",
+      "com.distriqt.extension.application.keyboard.SoftKeyboard",
+      "com.distriqt.extension.application.keyboard.SoftKeyboardMode"
+    ],
+    "source": "ext/com.distriqt.Application/src"
+  },
+  {
+    "id": "com.distriqt.Battery",
+    "versionNumber": "3.0.003",
+    "dll": "dqbatt.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "batt",
+    "nativeDll": null,
+    "classes": [
+      "com.distriqt.extension.battery.Battery",
+      "com.distriqt.extension.battery.BatteryExtension",
+      "com.distriqt.extension.battery.BatteryState",
+      "com.distriqt.extension.battery.Version",
+      "com.distriqt.extension.battery.events.BatteryEvent"
+    ],
+    "source": "ext/com.distriqt.Battery/src"
+  },
+  {
+    "id": "com.distriqt.Core",
+    "versionNumber": "4.0.269",
+    "dll": "dqcore.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "core",
+    "nativeDll": null,
+    "classes": [
+      "com.distriqt.extension.core.Core",
+      "com.distriqt.extension.core.CoreExtension",
+      "com.distriqt.extension.core.Version"
+    ],
+    "source": "ext/com.distriqt.Core/src"
+  },
+  {
+    "id": "com.distriqt.GameServices",
+    "versionNumber": "5.0.005",
+    "dll": "dqgame.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "game",
+    "nativeDll": null,
+    "classes": [
+      "com.distriqt.extension.gameservices.GameServices",
+      "com.distriqt.extension.gameservices.GameServicesExtension",
+      "com.distriqt.extension.gameservices.Player",
+      "com.distriqt.extension.gameservices.Service",
+      "com.distriqt.extension.gameservices.ServiceEnvironment",
+      "com.distriqt.extension.gameservices.Version",
+      "com.distriqt.extension.gameservices._AchievementsImpl",
+      "com.distriqt.extension.gameservices._AuthUtilImpl",
+      "com.distriqt.extension.gameservices._LeaderboardsImpl",
+      "com.distriqt.extension.gameservices._PlayersImpl",
+      "com.distriqt.extension.gameservices._QuestsImpl",
+      "com.distriqt.extension.gameservices._SavedGamesImpl",
+      "com.distriqt.extension.gameservices._ScreenRecordingImpl",
+      "com.distriqt.extension.gameservices._TurnBasedMatchImpl",
+      "com.distriqt.extension.gameservices._TurnBasedMultiplayerImpl",
+      "com.distriqt.extension.gameservices.achievements.Achievement",
+      "com.distriqt.extension.gameservices.achievements.AchievementState",
+      "com.distriqt.extension.gameservices.achievements.AchievementType",
+      "com.distriqt.extension.gameservices.achievements.Achievements",
+      "com.distriqt.extension.gameservices.auth.AuthUtil",
+      "com.distriqt.extension.gameservices.events.AchievementEvent",
+      "com.distriqt.extension.gameservices.events.AuthUtilEvent",
+      "com.distriqt.extension.gameservices.events.GameServicesEvent",
+      "com.distriqt.extension.gameservices.events.LeaderboardEvent",
+      "com.distriqt.extension.gameservices.events.MultiplayerEvent",
+      "com.distriqt.extension.gameservices.events.PlayerEvent",
+      "com.distriqt.extension.gameservices.events.PlayerEventEvent",
+      "com.distriqt.extension.gameservices.events.PlayerIconEvent",
+      "com.distriqt.extension.gameservices.events.PlayersEvent",
+      "com.distriqt.extension.gameservices.events.QuestEvent",
+      "com.distriqt.extension.gameservices.events.SavedGamesEvent",
+      "com.distriqt.extension.gameservices.events.ScreenRecordingEvent",
+      "com.distriqt.extension.gameservices.events.TurnBasedMatchEvent",
+      "com.distriqt.extension.gameservices.events.TurnBasedMultiplayerEvent",
+      "com.distriqt.extension.gameservices.leaderboards.Leaderboard",
+      "com.distriqt.extension.gameservices.leaderboards.LeaderboardScore",
+      "com.distriqt.extension.gameservices.leaderboards.Leaderboards",
+      "com.distriqt.extension.gameservices.multiplayer.Invitation",
+      "com.distriqt.extension.gameservices.multiplayer.Participant",
+      "com.distriqt.extension.gameservices.multiplayer.ParticipantResult",
+      "com.distriqt.extension.gameservices.multiplayer.PlayerSelectionOptions",
+      "com.distriqt.extension.gameservices.players.Players",
+      "com.distriqt.extension.gameservices.quests.Milestone",
+      "com.distriqt.extension.gameservices.quests.PlayerEvent",
+      "com.distriqt.extension.gameservices.quests.Quest",
+      "com.distriqt.extension.gameservices.quests.Quests",
+      "com.distriqt.extension.gameservices.recording.ScreenRecording",
+      "com.distriqt.extension.gameservices.recording.ScreenRecordingOptions",
+      "com.distriqt.extension.gameservices.savedgames.SavedGame",
+      "com.distriqt.extension.gameservices.savedgames.SavedGames",
+      "com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatch",
+      "com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchConfig",
+      "com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMatchStatus",
+      "com.distriqt.extension.gameservices.turnbasedmultiplayer.TurnBasedMultiplayer",
+      "com.distriqt.extension.gameservices.utils.Base64",
+      "com.distriqt.extension.gameservices.utils.Base64New",
+      "com.distriqt.extension.gameservices.utils.Hex",
+      "stop_recording_button_png$90d74ac431f78120c11f3fa0c66bf63b1350089600"
+    ],
+    "source": "ext/com.distriqt.GameServices/src"
+  },
+  {
+    "id": "com.distriqt.InAppBilling",
+    "versionNumber": "14.0.0",
+    "dll": "dqiap.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "iap",
+    "nativeDll": null,
+    "classes": [
+      "com.distriqt.extension.inappbilling.ApplicationReceipt",
+      "com.distriqt.extension.inappbilling.ApplicationReceiptProperties",
+      "com.distriqt.extension.inappbilling.BillingService",
+      "com.distriqt.extension.inappbilling.Const",
+      "com.distriqt.extension.inappbilling.ErrorCodes",
+      "com.distriqt.extension.inappbilling.InAppBilling",
+      "com.distriqt.extension.inappbilling.InAppBillingExtension",
+      "com.distriqt.extension.inappbilling.InAppBillingServiceTypes",
+      "com.distriqt.extension.inappbilling.Product",
+      "com.distriqt.extension.inappbilling.ProductDiscount",
+      "com.distriqt.extension.inappbilling.Purchase",
+      "com.distriqt.extension.inappbilling.PurchaseChangeRequest",
+      "com.distriqt.extension.inappbilling.PurchaseRequest",
+      "com.distriqt.extension.inappbilling.SubscriptionOffer",
+      "com.distriqt.extension.inappbilling.SubscriptionOfferRequest",
+      "com.distriqt.extension.inappbilling.SubscriptionPeriod",
+      "com.distriqt.extension.inappbilling.SubscriptionPhase",
+      "com.distriqt.extension.inappbilling._ApplicationReceiptImpl",
+      "com.distriqt.extension.inappbilling._DownloadsImpl",
+      "com.distriqt.extension.inappbilling._InAppUpdatesImpl",
+      "com.distriqt.extension.inappbilling._PromotionsImpl",
+      "com.distriqt.extension.inappbilling.events.ApplicationReceiptEvent",
+      "com.distriqt.extension.inappbilling.events.InAppBillingEvent",
+      "com.distriqt.extension.inappbilling.events.InAppUpdatesEvent",
+      "com.distriqt.extension.inappbilling.events.ProductOverlayEvent",
+      "com.distriqt.extension.inappbilling.events.ProductViewEvent",
+      "com.distriqt.extension.inappbilling.events.PromotionsEvent",
+      "com.distriqt.extension.inappbilling.events.PurchaseEvent",
+      "com.distriqt.extension.inappbilling.events.PurchaseRequestEvent",
+      "com.distriqt.extension.inappbilling.events.UserDataEvent",
+      "com.distriqt.extension.inappbilling.promotions.PromotionVisibility",
+      "com.distriqt.extension.inappbilling.promotions.Promotions",
+      "com.distriqt.extension.inappbilling.purchases.Downloads",
+      "com.distriqt.extension.inappbilling.updates.InAppUpdateAvailablity",
+      "com.distriqt.extension.inappbilling.updates.InAppUpdateErrorCodes",
+      "com.distriqt.extension.inappbilling.updates.InAppUpdateInfo",
+      "com.distriqt.extension.inappbilling.updates.InAppUpdates",
+      "com.distriqt.extension.inappbilling.user.UserData"
+    ],
+    "source": "ext/com.distriqt.InAppBilling/src"
+  },
+  {
+    "id": "com.sesisoft.KakaoGameSdk",
+    "versionNumber": "1.0.0",
+    "dll": "kakao.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "kakao",
+    "nativeDll": null,
+    "classes": [
+      "com.sesisoft.kakaoGameSdk.KakaoGameSdkExtension"
+    ],
+    "source": "ext/com.sesisoft.KakaoGameSdk/src"
+  },
+  {
+    "id": "com.sesisoft.PushService",
+    "versionNumber": "1.0.0",
+    "dll": "push.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "push",
+    "nativeDll": null,
+    "classes": [
+      "com.sesisoft.pushService.PushServiceExtension"
+    ],
+    "source": "ext/com.sesisoft.PushService/src"
+  },
+  {
+    "id": "com.sesisoft.SingularSdk",
+    "versionNumber": "1.0.0",
+    "dll": "singular.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "singular",
+    "nativeDll": null,
+    "classes": [
+      "com.sesisoft.singularSdk.SingularSdkExtension"
+    ],
+    "source": "ext/com.sesisoft.SingularSdk/src"
+  },
+  {
+    "id": "com.sesisoft.gxshield",
+    "versionNumber": "1.0.0",
+    "dll": "gxshield.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "gxshield",
+    "nativeDll": null,
+    "classes": [
+      "com.sesisoft.gxshield.GxShieldExtension"
+    ],
+    "source": "ext/com.sesisoft.gxshield/src"
+  },
+  {
+    "id": "pinball.ane.getbuild",
+    "versionNumber": "1.0.0",
+    "dll": "getbuild.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "getbuild",
+    "nativeDll": null,
+    "classes": [
+      "pinball.ane.getbuild.GetBuildExtension"
+    ],
+    "source": "ext/pinball.ane.getbuild/src"
+  },
+  {
+    "id": "pinball.assetDownload",
+    "versionNumber": "1.0.0",
+    "dll": "assetdl.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "assetdl",
+    "nativeDll": null,
+    "classes": [
+      "pinball.assetDownload.AssetDownloadExtension"
+    ],
+    "source": "ext/pinball.assetDownload/src"
+  },
+  {
+    "id": "pinball.checkapp",
+    "versionNumber": "1.0.0",
+    "dll": "checkapp.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "checkapp",
+    "nativeDll": null,
+    "classes": [
+      "pinball.checkapp.CheckAppExtension"
+    ],
+    "source": "ext/pinball.checkapp/src"
+  },
+  {
+    "id": "pinball.screen",
+    "versionNumber": "1.0.0",
+    "dll": "screen.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "screen",
+    "nativeDll": null,
+    "classes": [
+      "pinball.screen.ScreenExtension"
+    ],
+    "source": "ext/pinball.screen/src"
+  },
+  {
+    "id": "pinball.vibration",
+    "versionNumber": "1.0.0",
+    "dll": "vibration.dll",
+    "platforms": [
+      "Windows-x86",
+      "Windows-x86-64"
+    ],
+    "shimTag": "vibration",
+    "nativeDll": null,
+    "classes": [
+      "pinball.vibration.VibrationExtension"
+    ],
+    "source": "ext/pinball.vibration/src"
+  }
+]

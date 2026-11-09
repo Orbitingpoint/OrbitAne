@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/51.0">
+	<id>com.distriqt.Battery</id>
+	<versionNumber>3.0.003</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>dqbatt.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="Windows-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>dqbatt.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

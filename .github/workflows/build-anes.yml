@@ -1,0 +1,102 @@
+name: Build Windows ANEs
+
+# Rebuilds shim DLLs and all 15 Windows .ane files, then uploads:
+#   out_shim.zip     - the packaged ANEs (out_shim/<extensionID>.ane)
+#   shim-dlls.zip    - the compiled x86/x64 shim DLLs
+#
+# The AIR SDK is downloaded automatically by joshtynjala/setup-adobe-air-action
+# (or restored from the actions/cache entry), so no repo secret is required.
+# Using the action accepts the Adobe/Wipro AIR SDK licence on your behalf.
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'shim/**'
+      - 'ext/**'
+      - 'tools/**'
+      - 'manifest.json'
+      - '.github/workflows/build-anes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Java (adt/compc)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Cache AIR SDK
+        id: cache-air
+        uses: actions/cache@v4
+        with:
+          path: C:\AIR_SDK
+          key: air-sdk-${{ vars.AIRSDK_VERSION || '51.4.1.2' }}
+
+      - name: Setup Adobe AIR SDK
+        if: steps.cache-air.outputs.cache-hit != 'true'
+        uses: joshtynjala/setup-adobe-air-action@v2
+        with:
+          air-version: ${{ vars.AIRSDK_VERSION || '51.4.1.2' }}
+          accept-license: true
+
+      - name: Expose AIRSDK
+        shell: pwsh
+        run: |
+          $root = $env:AIR_HOME
+          if (-not $root) { $root = 'C:\AIR_SDK' }
+          if (-not (Test-Path (Join-Path $root 'bin\adt.bat'))) {
+            throw "AIR SDK not found at $root."
+          }
+          "AIRSDK=$root" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding ascii
+          Write-Host "Using AIR SDK: $root"
+
+      - name: Build shim DLLs (x86 + x64)
+        shell: cmd
+        run: shim\build-shim.bat
+
+      - name: Create self-signed signing certificate
+        shell: cmd
+        run: tools\make-cert.bat
+
+      - name: Build ANEs
+        shell: pwsh
+        run: python tools\build-anes.py --air-sdk $env:AIRSDK --keystore cert.p12 --storepass password
+
+      - name: Zip shim DLLs
+        shell: pwsh
+        run: Compress-Archive -Path shim\x86, shim\x64 -DestinationPath shim-dlls.zip -Force
+
+      - name: Zip out_shim
+        shell: pwsh
+        run: Compress-Archive -Path out_shim -DestinationPath out_shim.zip -Force
+
+      - name: Upload shim DLLs
+        uses: actions/upload-artifact@v4
+        with:
+          name: shim-dlls
+          path: shim-dlls.zip
+          retention-days: 30
+
+      - name: Upload out_shim
+        uses: actions/upload-artifact@v4
+        with:
+          name: out_shim
+          path: out_shim.zip
+          retention-days: 30

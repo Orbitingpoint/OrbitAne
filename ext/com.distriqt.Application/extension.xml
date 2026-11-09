@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/51.0">
+	<id>com.distriqt.Application</id>
+	<versionNumber>6.5.049</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>dqapp.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="Windows-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>dqapp.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

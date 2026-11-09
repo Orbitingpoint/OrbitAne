@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/51.0">
+	<id>pinball.vibration</id>
+	<versionNumber>1.0.0</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>vibration.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="Windows-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>vibration.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>

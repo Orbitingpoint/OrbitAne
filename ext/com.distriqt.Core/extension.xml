@@ -1,0 +1,21 @@
+<extension xmlns="http://ns.adobe.com/air/extension/51.0">
+	<id>com.distriqt.Core</id>
+	<versionNumber>4.0.269</versionNumber>
+	<platforms>
+		<platform name="Windows-x86">
+			<applicationDeployment>
+				<nativeLibrary>dqcore.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="Windows-x86-64">
+			<applicationDeployment>
+				<nativeLibrary>dqcore.dll</nativeLibrary>
+				<initializer>ExtInitializer</initializer>
+				<finalizer>ExtFinalizer</finalizer></applicationDeployment>
+		</platform>
+		<platform name="default">
+			<applicationDeployment />
+		</platform>
+	</platforms>
+</extension>
