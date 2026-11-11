@@ -1,0 +1,1 @@
+Ai was used in order to recreate the code of the extensions, while it currently works at some point I will rewrite them from scratch to add some features and improve performance if posible
